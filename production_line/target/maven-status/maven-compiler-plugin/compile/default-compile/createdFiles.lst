@@ -1,0 +1,11 @@
+io\takamaka\productionline\PrinterConstraints.class
+io\takamaka\productionline\Machine.class
+module-info.class
+io\takamaka\productionline\MillingMachineConstraints.class
+io\takamaka\productionline\PrinterMeasurements.class
+io\takamaka\productionline\Company.class
+io\takamaka\productionline\Constraints.class
+io\takamaka\productionline\MillingMachineMeasurements.class
+io\takamaka\productionline\Measurements.class
+io\takamaka\productionline\Operation.class
+io\takamaka\productionline\Product.class
