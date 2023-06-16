@@ -8,4 +8,5 @@ module runs {
   requires io.hotmoka.tendermint;
   requires io.hotmoka.service;
   requires io.hotmoka.constants;
+requires java.desktop;
 }

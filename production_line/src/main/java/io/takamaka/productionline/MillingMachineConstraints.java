@@ -1,27 +1,25 @@
 package io.takamaka.productionline;
-import io.takamaka.code.lang.Storage;
+
+import io.takamaka.code.lang.View;
 import io.takamaka.code.lang.Exported;
 
 @Exported
-public class MillingMachineConstraints extends Constraints{
+public class MillingMachineConstraints extends Constraints {
 	private String bit;
 	private float bitSize;
 	private float chuckVelocityMax;
 	private float chuckVelocityMin;
-	
-	public MillingMachineConstraints(
-			String bit, 
-			float bitSize,
-			float chuckVelocityMax,
-			float chuckVelocityMin, 
-			int duration,int frequency) {
-				super(duration, frequency);
-				this.bit = bit;
-				this.bitSize = bitSize;
-				this.chuckVelocityMax = chuckVelocityMax;
-				this.chuckVelocityMin = chuckVelocityMin;
+
+	public MillingMachineConstraints(String bit, float bitSize, float chuckVelocityMax, float chuckVelocityMin,
+			int duration, int frequency) {
+		super(duration, frequency);
+		this.bit = bit;
+		this.bitSize = bitSize;
+		this.chuckVelocityMax = chuckVelocityMax;
+		this.chuckVelocityMin = chuckVelocityMin;
 	}
 
+	@View
 	public String getBit() {
 		return bit;
 	}
@@ -30,6 +28,7 @@ public class MillingMachineConstraints extends Constraints{
 		this.bit = bit;
 	}
 
+	@View
 	public float getBitSize() {
 		return bitSize;
 	}
@@ -38,6 +37,7 @@ public class MillingMachineConstraints extends Constraints{
 		this.bitSize = bitSize;
 	}
 
+	@View
 	public float getChuckVelocityMax() {
 		return chuckVelocityMax;
 	}
@@ -46,6 +46,7 @@ public class MillingMachineConstraints extends Constraints{
 		this.chuckVelocityMax = chuckVelocityMax;
 	}
 
+	@View
 	public float getChuckVelocityMin() {
 		return chuckVelocityMin;
 	}
@@ -54,15 +55,11 @@ public class MillingMachineConstraints extends Constraints{
 		this.chuckVelocityMin = chuckVelocityMin;
 	}
 	
-	public void setRespected(boolean respected) {
-		super.setRespected(respected);
-	}
-	
+	@View
 	public String toString() {
-		return "MillingMachineConstraints: [bit=" + bit + ", bitSize=" + bitSize +
-				", chuckVelocityMax=" + chuckVelocityMax + ", chuckVelocityMin=" + chuckVelocityMin +
-				", duration=" + getDuration() + ", frequency=" + getFrequency() + ", respected=" + isRespected() +"]";
+		return "MillingMachineConstraints: [bit=" + bit + ", bitSize=" + bitSize + ", chuckVelocityMax="
+				+ chuckVelocityMax + ", chuckVelocityMin=" + chuckVelocityMin + ", duration=" + getDuration()
+				+ ", frequency=" + getFrequency() + "]";
 	}
-
 
 }

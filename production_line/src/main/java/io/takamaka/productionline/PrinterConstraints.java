@@ -1,26 +1,25 @@
 package io.takamaka.productionline;
-import io.takamaka.code.lang.Storage;
+
+import io.takamaka.code.lang.View;
 import io.takamaka.code.lang.Exported;
 
 @Exported
-public class PrinterConstraints extends Constraints{
+public class PrinterConstraints extends Constraints {
 	private String filamentType;
 	private String filamentColour;
 	private float plateTemperatureMax;
 	private float plateTemperatureMin;
-	
-	public PrinterConstraints(
-			String filamentType, String filamentColour, 
-			float plateTemperatureMax,
-			float plateTemperatureMin, 
-			int duration, int frequency) {
-				super(duration, frequency);
-				this.filamentType = filamentType;
-				this.filamentColour = filamentColour;
-				this.plateTemperatureMax = plateTemperatureMax;
-				this.plateTemperatureMin = plateTemperatureMin;
+
+	public PrinterConstraints(String filamentType, String filamentColour, float plateTemperatureMax,
+			float plateTemperatureMin, int duration, int frequency) {
+		super(duration, frequency);
+		this.filamentType = filamentType;
+		this.filamentColour = filamentColour;
+		this.plateTemperatureMax = plateTemperatureMax;
+		this.plateTemperatureMin = plateTemperatureMin;
 	}
 
+	@View
 	public String getFilamentType() {
 		return filamentType;
 	}
@@ -29,6 +28,7 @@ public class PrinterConstraints extends Constraints{
 		this.filamentType = filamentType;
 	}
 
+	@View
 	public String getFilamentColour() {
 		return filamentColour;
 	}
@@ -37,6 +37,7 @@ public class PrinterConstraints extends Constraints{
 		this.filamentColour = filamentColour;
 	}
 
+	@View
 	public float getPlateTemperatureMax() {
 		return plateTemperatureMax;
 	}
@@ -45,6 +46,7 @@ public class PrinterConstraints extends Constraints{
 		this.plateTemperatureMax = plateTemperatureMax;
 	}
 
+	@View
 	public float getPlateTemperatureMin() {
 		return plateTemperatureMin;
 	}
@@ -54,14 +56,10 @@ public class PrinterConstraints extends Constraints{
 	}
 
 	@Override
-	public String toString() {
+	public @View String toString() {
 		return "PrinterConstraints [filamentType=" + filamentType + ", filamentColour=" + filamentColour
-				+ ", plateTemperatureMax=" + plateTemperatureMax + ", plateTemperatureMin=" + plateTemperatureMin +
-				", duration=" + getDuration() +", frequency=" + getFrequency() +"]";
+				+ ", plateTemperatureMax=" + plateTemperatureMax + ", plateTemperatureMin=" + plateTemperatureMin
+				+ ", duration=" + getDuration() + ", frequency=" + getFrequency() + "]";
 	}
-
-
-	
-	
 
 }

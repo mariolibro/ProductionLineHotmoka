@@ -1,62 +1,43 @@
 package io.takamaka.productionline;
-import io.takamaka.code.lang.Storage;
+
 import io.takamaka.code.lang.Exported;
+import io.takamaka.code.lang.Storage;
+import io.takamaka.code.lang.View;
 import io.takamaka.code.util.StorageLinkedList;
 import io.takamaka.code.util.StorageList;
 
 @Exported
-public class Product extends Storage{
-	private String name;
-	private StorageList<Operation> recipe;
-	private boolean recipeCompleted = false;
-	private boolean constraintRespected = false;
-	
-	public Product(String name) {
-		this.name = name;
-		this.recipe = new StorageLinkedList<Operation>();
-	}
-	
-	public boolean isRecipeCompleted() {
-		return recipeCompleted;
+public class Product extends Storage {
+	private String id;
+	private StorageList<OperationDone> operations_done;
+
+	public Product(String id) {
+		this.id = id;
+		this.operations_done = new StorageLinkedList<OperationDone>();
 	}
 
-	public void setRecipeCompleted(boolean recipeCompleted) {
-		this.recipeCompleted = recipeCompleted;
-	}
-
-	public boolean isConstraintRespected() {
-		return constraintRespected;
-	}
-
-	public void setConstraintRespected(boolean constraintRespected) {
-		this.constraintRespected = constraintRespected;
-	}
-
-	public void addOperation(Operation operation) {
-		recipe.add(operation);	
+	public void addOperationDone(OperationDone operationDone) {
+		operations_done.add(operationDone);
 	}
 	
-	public boolean removeOperation(Operation operation) {
-		  if(recipe.contains(operation)) {
-			  recipe.remove(operation);
-			  return true;
-		  }
-		  return false;
+	@View
+	public String getId() {
+		return id;
 	}
 	
-	public String getName() {
-		return name;
+	@View
+	public StorageList<OperationDone> getOperations_done() {
+		return operations_done;
 	}
-	
+
 	@Override
-	public String toString() {
+	public @View String toString() {
 		String tmp = "";
-		if (recipe != null) {
-		for (Operation operation: recipe)
-			  tmp += operation.getName() + " ";
+		if (operations_done != null) {
+			for (OperationDone operationDone : operations_done)
+				tmp += operationDone.getName() + " ";
 		}
-		return "Product: [name=" + name + ", recipeCompleted=" + recipeCompleted +
-				", constraintRespected=" + constraintRespected + ", recipe=" + tmp + "]";
+		return "Product [id=" + id + ", operations_done=" + tmp + "]";
 	}
-	
+
 }

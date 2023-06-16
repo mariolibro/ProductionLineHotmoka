@@ -1,0 +1,6 @@
+ INFO: [WebSocketClient] Connecting to ws://54.194.239.91/node [16-06-2023 10:03:03]
+ INFO: [WebSocketClient] Connected to server [16-06-2023 10:03:03]
+ INFO: [WebSocketClient] Received message [16-06-2023 10:03:03]
+ INFO: [WebSocketClient] Connected to stomp session [16-06-2023 10:03:03]
+ INFO: [WebSocketClient] Received message [16-06-2023 10:03:03]
+ INFO: [WebSocketClient] Subscribed to topic /topic/events [16-06-2023 10:03:03]
