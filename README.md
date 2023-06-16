@@ -2,10 +2,9 @@
 
 University project for the course of Cyber Security for IoT.
 
-## Introduction
-
 This project is designed to develop a method for certifying and verifying industrial manufacturing processes using the Hotmoka blockchain.
 
+## Introduction
 The central aim of this project is to facilitate the definition and description of key concepts inherent within an industrial plant, and subsequently store this information in the [Hotmoka blockchain](https://github.com/Hotmoka/hotmoka). This process will allow for future access and verification of the stored data, thereby improving transparency and accountability in the manufacturing process.
 
 The project primarily concentrates on outlining the elements of a production recipe. This includes understanding the sequence of operations and identifying the machines involved in the process. Additionally, it underscores the constraints imposed by the recipe on the operations needed to create a finished product. Moreover, it tracks the operations executed to produce a specific product. The main structure of this process is detailed in the class diagram available [here](https://github.com/MarioLibro/ProductionLineHotmoka/blob/main/uml.png).
