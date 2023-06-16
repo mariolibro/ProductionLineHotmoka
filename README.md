@@ -20,7 +20,7 @@ Ensure to note down the *password* and the *entropy* (random sequence of bits th
     $ moka create-account 50000000000 --payer faucet --url panarea.hotmoka.io
 ```
 
-- Using EclipseIDE, import the two projects:
+- Using EclipseIDE (I have used v2021.12), import the two projects via `Import existing projects into the workspace` and selecting the two directory:
   - `/runs`
   - `/production_line`
 
