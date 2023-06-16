@@ -43,5 +43,4 @@ Ensure to note down the *password* and the *entropy* (random sequence of bits th
 
 ## Results
 
-To better understand the results obtained, I recommend reviewing the documents located in the `/docs directory`.
-
+To better understand the results obtained, I recommend reviewing the documents located in the `/docs` directory.
